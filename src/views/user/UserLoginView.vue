@@ -56,7 +56,7 @@ const handleSubmit = async () => {
       path: "/",
       replace: true,
     });
-    alert("登录成功" + JSON.stringify(res.data));
+    // alert("登录成功" + JSON.stringify(res.data));
   } else {
     message.error("登录失败," + res.message);
   }
