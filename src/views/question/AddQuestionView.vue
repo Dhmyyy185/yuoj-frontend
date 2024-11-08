@@ -1,6 +1,6 @@
 <template>
   <div id="addQuestionView">
-    <h2 align="center">创建题目</h2>
+    <h2 align="center">{{ route.name }}</h2>
     <a-form :model="form">
       <a-form-item field="title" label="标题">
         <a-input v-model="form.title" placeholder="请输入标题" />
@@ -108,7 +108,7 @@ import { onMounted, reactive, ref } from "vue";
 import MdEditor from "@/components/MdEditor.vue";
 import { QuestionControllerService } from "../../../generated";
 import message from "@arco-design/web-vue/es/message";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 
 const route = useRoute();
 // 如果页面地址包含update,视为更新页面
